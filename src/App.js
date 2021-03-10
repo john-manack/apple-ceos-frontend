@@ -1,11 +1,10 @@
-import './App.css';
+import CeoList from './components/CeoList';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h3>Apple CEOs Frontend</h3>
-      </header>
+      <h1>Apple CEOs - React Frontend</h1>
+      <CeoList />
     </div>
   );
 }
