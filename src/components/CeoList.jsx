@@ -22,7 +22,7 @@ const CeoList = () => {
                             {ceos.map((ceo, index) => {
                                 return (
                                     <li key={index}>
-                                        <Link to={`ceo/${ceo.slug}`}>{ceo.name}</Link>
+                                        <Link to={`/ceo/${ceo.slug}`}>{ceo.name}</Link>
                                     </li>
                                 )
                             })}
