@@ -10,7 +10,7 @@ const CeoDetails = () => {
             const ceoData = await fetch(`http://127.0.0.1:3000/ceos/${ceo_slug}`).then(response => response.json());
             setCeo(ceoData);
         })();
-    },[ceo_slug]);
+    },[setCeo, ceo_slug]);
 
     return (
         <p>{ceo.name} was CEO of Apple in {ceo.year}.</p>
