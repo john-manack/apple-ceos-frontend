@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Route, Link, useHistory } from 'react-router-dom';
 import CeoDetails from './CeoDetails';
 
-const CeoList = () => {
+const CeoList = ({reload}) => {
     const [ceos, setCeos] = useState([]);
     const history = useHistory();
 
@@ -11,7 +11,7 @@ const CeoList = () => {
             const ceoData = await fetch('http://127.0.0.1:3000/ceos').then(response => response.json());
             setCeos(ceoData);
         })();
-    },[]); // include the double brackets as the second 'dependency' argument in useEffect to prevent an infinite loop.
+    },[reload]); // include the double brackets as the second 'dependency' argument in useEffect to prevent an infinite loop.
 
     return (
         <>
